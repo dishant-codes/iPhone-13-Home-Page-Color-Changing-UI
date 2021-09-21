@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changing Cards</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="L_Side">
+        <div id="btn1" class="colorBtn1" onclick="setPink()"></div>
+        <div id="btn2" class="colorBtn2" onclick="setBlue()"></div>
+        <div id="btn3" class="colorBtn3"></div>
+        <div id="btn4" class="colorBtn4"></div>
+      </div>
+      <div class="R_Side">
+        <div id="pink" class="box-1">
+          <figure class="img-1"></figure>
+          <div class="text_box">
+            <p class="headline">
+              <strong>New</strong>
+              <br />
+              Pink
+              <br />
+              finish
+            </p>
+          </div>
+        </div>
+        <div id="blue" class="box-2">
+          <figure class="img-2"></figure>
+          <div class="text_box">
+            <p class="headline">
+              <strong>New</strong>
+              <br />
+              Blue
+              <br />
+              finish
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var pink = window.document.getElementById("pink");
+      var blue = window.document.getElementById("blue");
+      function setPink() {
+        pink.setAttribute("style", "z-index:2;");
+        pink.setAttribute("style", "opacity:1");
+        blue.setAttribute("style", "z-index:0");
+        blue.setAttribute("style", "opacity:0");
+        btn1.setAttribute("style", "border:2px solid #0071e3");
+        btn2.setAttribute("style", "border:none");
+      }
+
+      function setBlue() {
+        blue.setAttribute("style", "opacity:1");
+        blue.setAttribute("style", "z-index:2");
+        pink.setAttribute("style", "opacity:0");
+        pink.setAttribute("style", "z-index:0");
+        btn2.setAttribute("style", "border:2px solid #0071e3");
+        btn1.setAttribute("style", "border:none");
+      }
+    </script>
+  </body>
+</html>
